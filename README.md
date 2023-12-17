@@ -32,10 +32,18 @@ Para vizalização gráfica do MLflow é exutado o script mlflow_up
 
 O Apache Beam Cloud é empregado para realizar o processamento distribuído durante o treinamento. Ele proporciona escalabilidade e eficiência na manipulação de grandes volumes de dados, otimizando o tempo de treinamento do modelo.
 
-### Instalação do Apache Beam Cloud
+### Instalação do Beam Cloud
 
 ```bash
 pip install apache-beam
+```
+## Gradio
+Gradio é uma biblioteca de Python que facilita a criação de interfaces de usuário para modelos de aprendizado de máquina.
+Com o Gradio, é possível criar interfaces de usuário para modelos de visão computacional, processamento de linguagem natural, regressão, classificação e muitas outras tarefas de aprendizado de máquina. Além disso, ele suporta uma variedade de frameworks populares, como TensorFlow, PyTorch, Scikit-learn, entre outros.
+
+### Instalação do Gradio
+```bash
+pip install gradio
 ```
 
 ## Estrutura do Repositório
