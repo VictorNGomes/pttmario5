@@ -12,9 +12,29 @@ O objetivo principal deste projeto é treinar um modelo de sumarização em port
 
 O projeto utiliza dois conjuntos de dados obtidos de fontes confiáveis em português para o treinamento do modelo de sumarização. Os datasets estão disponíveis em [Hugging Face Datasets](https://huggingface.co/datasets) e são fundamentais para garantir a qualidade e diversidade dos dados de treinamento.
 
-## T5 Fine-Tuning
+### Corpus TéMario
+Consiste em 100 textos jornalísticos. 60 textos constam do jornal online Folha de São Paulo  e estão distribuídos igualmente nas seções Especial, Mundo e Opinião; os 40 textos restantes foram publicados no Jornal do Brasil.  
+     - http://www.nilc.icmc.usp.br/nilc/tools/TeMario.zip
+
+- HuggingFace: [VictorNGomes/pttmario5](https://huggingface.co/VictorNGomes/pttmario5)
+
+### XLsum
+XLSum é um conjunto de dados amplo e diversificado que inclui 1,35 milhão de pares de artigos e resumos anotados profissionalmente da BBC, obtidos por meio de um conjunto de heurísticas cuidadosamente elaboradas. O conjunto de dados abrange 45 idiomas, variando de baixo a alto recurso, muitos dos quais não possuem atualmente um conjunto de dados público disponível. O XL-Sum é altamente abstrato, conciso e de alta qualidade, conforme indicado por avaliações humanas e avaliações intrínsecas.
+
+- [csebuetnlp/xlsum](https://huggingface.co/datasets/csebuetnlp/xlsum/viewer/portuguese)
+
+
+## Modelo
+A principio o melo atual é um Fine Tuning do [unicamp-dl/ptt5-base-portuguese-vocab](https://huggingface.co/unicamp-dl/ptt5-base-portuguese-vocab) um modelo T5 pré-treinado no corpus BrWac, uma extensa compilação de páginas web em português, aprimorando significativamente o desempenho do T5 em tarefas relacionadas à similaridade e implicação de sentenças em português. Este modelo está disponível em três escalas (pequeno, básico e grande) e possui dois vocabulários distintos: o vocabulário original T5 do Google e o nosso, que foi treinado especificamente na Wikipédia em português.
+
+O modelo ajustado encontra-se em: [VictorNGomes/pttmario5](https://huggingface.co/VictorNGomes/pttmario5)
+
+
+### Fine-Tuning
 O processo de fine-tuning envolve treinar o modelo pré-treinado em um conjunto de dados menor, rotulado e específico para uma tarefa particular. 
 Fine-tuning T5 refere-se ao processo de ajustar um modelo pré-treinado chamado T5 (Text-to-Text Transfer Transformer) para uma tarefa de aprendizado específica.
+
+
 
 ## MLflow
 
@@ -77,6 +97,9 @@ Abra o navegador e acesse `http://localhost:5000` para visualizar os experimento
 ## Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorias, correções ou novas funcionalidades.
+
+## Refrencias
+ - https://github.com/unicamp-dl/PTT5
 
 ## Licença
 
