@@ -50,7 +50,7 @@ Para vizalização gráfica do MLflow é exutado o script mlflow_up
 
 ## Beam Cloud
 
-O Apache Beam Cloud é empregado para realizar o processamento distribuído durante o treinamento. Ele proporciona escalabilidade e eficiência na manipulação de grandes volumes de dados, otimizando o tempo de treinamento do modelo.
+O Beam Cloud é empregado para realizar o processamento distribuído durante o treinamento. Ele proporciona escalabilidade e eficiência na manipulação de grandes volumes de dados, otimizando o tempo de treinamento do modelo. Uma observação a ser feita é que o uso do Beam Cloud é para fins de inferência.
 
 ### Instalação do Beam Cloud
 
