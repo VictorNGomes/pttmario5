@@ -87,40 +87,39 @@ Com o Gradio, é possível criar interfaces de usuário para modelos de visão c
 
 ## Como Usar
 
-1. Clone este repositório:
+1. Acompanhe o progresso do treinamento utilizando o MLflow:
 
 ```bash
-git clone https://github.com/seu-usuario/mlops-sumarizacao.git
-cd mlops-sumarizacao
+export NGROK_AUTH_TOKEN = 'token'
+python mlflow_up.py
 ```
 
-2. Instale as dependências:
+2. Execute o script de treinamento:
+
 
 ```bash
-pip install -r requirements.txt
+python train.py --model_checkpoint VictorNGomes/pttmario5\
+                --tokenizer VictorNGomes/pttmario5 \
+                --dataset VictorNGomes/CorpusTeMario\
+                --text_column texto\
+                --summary_column sumario\
+                --experiment_name seu_experimento \
+                --push_to_huggingface
+
 ```
 
-3. Execute o script de treinamento:
 
-```bash
-python train.py --dataset caminho/para/dataset
-```
 
-4. Acompanhe o progresso do treinamento utilizando o MLflow:
-
-```bash
-mlflow ui
-```
-
-Abra o navegador e acesse `http://localhost:5000` para visualizar os experimentos.
+Abra o navegador e acesse `http://localhost:5000` ou link do NGROK para visualizar os experimentos.
 
 ## Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorias, correções ou novas funcionalidades.
 
 ## Refrencias
- - https://github.com/unicamp-dl/PTT5
-
+ - [PTT5](https://github.com/unicamp-dl/PTT5)
+ - [TéMario](http://www.nilc.icmc.usp.br/nilc/index.php/tools-and-resources}
+ - [Notebook based](https://github.com/rohan-paul/LLM-FineTuning-Large-Language-Models/blob/main/Other-Language_Models_BERT_related/Fine_Tuning_Pegasus_for_Text_Summarization.ipynb)
 ## Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
