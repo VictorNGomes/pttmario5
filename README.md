@@ -78,6 +78,8 @@ print(response.text)
 Gradio é uma biblioteca de Python que facilita a criação de interfaces de usuário para modelos de aprendizado de máquina.
 Com o Gradio, é possível criar interfaces de usuário para modelos de visão computacional, processamento de linguagem natural, regressão, classificação e muitas outras tarefas de aprendizado de máquina. Além disso, ele suporta uma variedade de frameworks populares, como TensorFlow, PyTorch, Scikit-learn, entre outros.
 
+[Interface](https://huggingface.co/spaces/VictorNGomes/Gradio-Summarization-pt-br)
+
 
 
 ## Estrutura do Repositório
