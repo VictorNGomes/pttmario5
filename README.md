@@ -50,28 +50,40 @@ Para vizalização gráfica do MLflow é exutado o script mlflow_up
 
 ## Beam Cloud
 
-O Apache Beam Cloud é empregado para realizar o processamento distribuído durante o treinamento. Ele proporciona escalabilidade e eficiência na manipulação de grandes volumes de dados, otimizando o tempo de treinamento do modelo.
+O Apache Beam Cloud é empregado para realizar o processamento distribuído durante o treinamento. Ele proporciona escalabilidade e eficiência na manipulação de grandes volumes de dados, otimizando o tempo de treinamento do modelo. Neste caso foi criada uam API para realizar inferencia.
 
-### Instalação do Beam Cloud
+### Inferencia pelo Beam Cloud
 
 ```bash
-pip install apache-beam
+import requests
+
+url = 'https://5xdli-657f654e0c95350007f20190.apps.beam.cloud'
+
+headers = {
+    'Accept': '*/*',
+    'Accept-Encoding': 'gzip, deflate',
+    'Connection': 'keep-alive',
+    'Authorization': 'TOKEN_BEAM_CLOUD',
+    'Content-Type': 'application/json',
+}
+
+data = {}
+
+response = requests.post(url, headers=headers, json=data)
+
+print(response.status_code)
+print(response.text)
 ```
 ## Gradio
 Gradio é uma biblioteca de Python que facilita a criação de interfaces de usuário para modelos de aprendizado de máquina.
 Com o Gradio, é possível criar interfaces de usuário para modelos de visão computacional, processamento de linguagem natural, regressão, classificação e muitas outras tarefas de aprendizado de máquina. Além disso, ele suporta uma variedade de frameworks populares, como TensorFlow, PyTorch, Scikit-learn, entre outros.
 
-### Instalação do Gradio
-```bash
-pip install gradio
-```
+
 
 ## Estrutura do Repositório
 
 - `train.py`: Script principal para treinamento do modelo. Aceita um conjunto de dados como entrada e executa o Fine Tuning da LLM para sumarização.
-- `datasets/`: Diretório que contém os conjuntos de dados utilizados para o treinamento.
-- `mlflow/`: Diretório para armazenar os logs e artefatos do MLflow.
-- `beam_cloud/`: Diretório que contém scripts e configurações para o processamento distribuído com Apache Beam Cloud.
+- `mlflow_up.py` Script para inciar a interface gráfica do MLflow
 
 ## Como Usar
 
