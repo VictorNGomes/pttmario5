@@ -114,9 +114,13 @@ python train.py --model_checkpoint VictorNGomes/pttmario5\
 
 Abra o navegador e acesse `http://localhost:5000` ou link do NGROK para visualizar os experimentos.
 
-## Contribuições
+## Grupo
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorias, correções ou novas funcionalidades.
+ - Jefferson dos Santos Leocadio
+ - Sidney Alves dos Santos Junior
+ - Victor do Nascimento Gomes
+
+
 
 ## Refrencias
  - [PTT5](https://github.com/unicamp-dl/PTT5)
