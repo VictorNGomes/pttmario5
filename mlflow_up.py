@@ -17,7 +17,7 @@ subprocess.Popen(["mlflow", "ui", "--backend-store-uri", MLFLOW_TRACKING_URI])
 
 mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
 # mlflow will create an experiment if it doesn't exist
-mlflow.set_experiment("finetuning-ptt5-base")
+#mlflow.set_experiment("finetuning-ptt5-base")
 
 
 print("Enter your authtoken, which can be copied from https://dashboard.ngrok.com/auth")
