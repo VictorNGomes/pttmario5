@@ -14,7 +14,7 @@ O projeto utiliza dois conjuntos de dados obtidos de fontes confiáveis em portu
 
 ### Corpus TéMario
 Consiste em 100 textos jornalísticos. 60 textos constam do jornal online Folha de São Paulo  e estão distribuídos igualmente nas seções Especial, Mundo e Opinião; os 40 textos restantes foram publicados no Jornal do Brasil.  
-     - http://www.nilc.icmc.usp.br/nilc/tools/TeMario.zip
+- http://www.nilc.icmc.usp.br/nilc/tools/TeMario.zip
 
 - HuggingFace: [VictorNGomes/pttmario5](https://huggingface.co/VictorNGomes/pttmario5)
 
